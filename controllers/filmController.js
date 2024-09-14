@@ -110,7 +110,7 @@ exports.updateFilm = async (req, res) => {
 
     if (req.file) {
       if (image_thumbnail) {
-        fs.unlinkSync(path.join(__dirname, '../uploads/thumbnails', image_thumbnail));
+        fs.unlinkSync(path.join(__dirname, '../storage/videos/', image_thumbnail));
       }
       image_thumbnail = req.file.filename;
     }
